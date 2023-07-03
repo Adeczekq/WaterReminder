@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:argType="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:keepScreenOn="true">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/wave"
+        android:background="@drawable/wave"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="659dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/editTextWaterAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:gravity="center"
+            android:hint="@string/podaj_ilo_wody_w_ml"
+            android:inputType="number"
+            android:fontFamily="@font/bold"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="360dp">
+
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+
+                android:id="@+id/circularProgressBar"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                app:cpb_background_progressbar_color="#03f4fc"
+                app:cpb_background_progressbar_width="5dp"
+                app:cpb_round_border="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textViewProgres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:color="#232552"
+
+                android:gravity="center"
+                android:text=""
+                android:textColor="#5bb6eb"
+                android:shadowColor="#000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="1.6"
+
+                android:textAllCaps="true"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@id/circularProgressBar"
+                app:layout_constraintEnd_toEndOf="@id/circularProgressBar"
+                app:layout_constraintStart_toStartOf="@id/circularProgressBar"
+                app:layout_constraintTop_toTopOf="@id/circularProgressBar"
+                android:fontFamily="@font/bold" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/buttonAddWater"
+            android:layout_width="wrap_content"
+            android:layout_height="69dp"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/plus_c" />
+
+    </LinearLayout>
+
+</FrameLayout>
+
+

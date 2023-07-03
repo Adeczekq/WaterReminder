@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_dots"
+        android:icon="@drawable/baseline_menu_24"
+        android:title=""
+        android:orderInCategory="100"
+        app:showAsAction="always">
+        <menu>
+         
+            <item
+                android:id="@+id/menu_change_target_water_amount"
+                android:title="Zmień swój cel"
+                android:inputType="number"/>
+            <item
+                android:id="@+id/clear_water"
+                android:title="Wyzeruj wypitą wode"
+                />
+            <item
+                android:id="@+id/notify"
+                android:title="Wyslij powiadomienie"
+                />
+        </menu>
+    </item>
+</menu>
